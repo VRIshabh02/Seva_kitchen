@@ -22,7 +22,18 @@ class HospitalCanteensPage extends StatelessWidget {
           child: Column(mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 50,),
+              SizedBox(height: 20,),
+              Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Icon(
+                      Icons.menu,
+                      size: 40,
+                      color: Colors.white,
+                    ),
+                  )
+              ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(

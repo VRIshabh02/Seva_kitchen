@@ -18,21 +18,21 @@ class HowItWorksPage extends StatelessWidget {
         ),
         Scaffold(
         backgroundColor: Colors.transparent,
-          body: Column(mainAxisAlignment: MainAxisAlignment.center,
+          body: Column(mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Icon(
-                      Icons.menu,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  )
-              ),
-              SizedBox(height: 40,),
+              // Align(
+              //     alignment: Alignment.topLeft,
+              //     child: Padding(
+              //       padding: const EdgeInsets.all(12.0),
+              //       child: Icon(
+              //         Icons.menu,
+              //         size: 40,
+              //         color: Colors.white,
+              //       ),
+              //     )
+              // ),
+              SizedBox(height: 30,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -45,7 +45,7 @@ class HowItWorksPage extends StatelessWidget {
                         "Home",
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w400,
-                            color: Colors.white),
+                            color: Color(0xFF905801)),
                       ),
                     ),
                   ),
@@ -53,7 +53,7 @@ class HowItWorksPage extends StatelessWidget {
                     child: Text(
                       "How it works",
                       style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w400, color: Colors.orangeAccent),
+                          fontWeight: FontWeight.w400, color: Colors.white),
                     ),
                   ),
                 ],

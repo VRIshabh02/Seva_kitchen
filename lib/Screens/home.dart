@@ -33,28 +33,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
             Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              GestureDetector(
-                onTap:(){
-                  setState(() {
-                    options = !options;
-                  });
-                },
-                child: Align(
-                    alignment: Alignment.topLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.all(12.0),
-                      child: Icon(
-                          Icons.menu,
-                        size: 40,
-                        color: Colors.white,
-                      ),
-                    )
-                ),
-              ),
+              // GestureDetector(
+              //   onTap:(){
+              //     setState(() {
+              //       options = !options;
+              //     });
+              //   },
+              //   child: Align(
+              //       alignment: Alignment.topLeft,
+              //       child: Padding(
+              //         padding: const EdgeInsets.all(12.0),
+              //         child: Icon(
+              //             Icons.menu,
+              //           size: 40,
+              //           color: Colors.white,
+              //         ),
+              //       )
+              //   ),
+              // ),
 
-              SizedBox(height: 40,),
+              SizedBox(height: 30,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       "Home",
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w400,
-                          color: Colors.orangeAccent),
+                          color: Colors.white),
                     ),
                   ),
                   GestureDetector(
@@ -72,9 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     child: Container(
                       child: Text(
-                        "How it works",
+                        "How it works?",
                         style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w400, color: Colors.white),
+                            fontWeight: FontWeight.w400, color: Color(
+                            0xFF905801)),
                       ),
                     ),
                   ),
@@ -111,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             child: Column(
                               children: [
-                                Text("Hospitals"),
+                                Text("Hospitals", style: GoogleFonts.poppins(fontWeight: FontWeight.bold),),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Divider(
@@ -168,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             child: Column(
                               children: [
-                                Text("Hospital Canteens"),
+                                Text("Hospital Canteens", style: GoogleFonts.poppins(fontWeight: FontWeight.bold),),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Divider(
@@ -225,7 +226,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             child: Column(
                               children: [
-                                Text("Social Workers"),
+                                Text("Social Workers", style: GoogleFonts.poppins(fontWeight: FontWeight.bold),),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Divider(
@@ -282,7 +283,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             child: Column(
                               children: [
-                                Text("Donors"),
+                                Text("Donors", style: GoogleFonts.poppins(fontWeight: FontWeight.bold),),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Divider(
@@ -314,45 +315,6 @@ class _MyHomePageState extends State<MyHomePage> {
               )
             ],
           ),
-            options == true ?
-            Positioned(
-              top:100 ,
-              left: 50,
-              child: Container(
-                height: 100,
-                width: 120,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12)
-                ),
-                child: Column(mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("Tell your Friends",
-                        style: GoogleFonts.poppins(color: Colors.black, fontSize: 10),
-                        textAlign: TextAlign.start,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("Contact Us",
-                        style: GoogleFonts.poppins(color: Colors.black, fontSize: 10),
-                      textAlign: TextAlign.start,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("Logout",
-                        style: GoogleFonts.poppins(color: Colors.black, fontSize: 10),
-                      textAlign: TextAlign.start,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ):
-            Container(),
     ]
         ),
       ),

@@ -23,17 +23,17 @@ class HospitalDetails extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Icon(
-                      Icons.menu,
-                      size: 40,
-                      color: Colors.white,
-                    ),
-                  )
-              ),
+              // Align(
+              //     alignment: Alignment.topLeft,
+              //     child: Padding(
+              //       padding: const EdgeInsets.all(12.0),
+              //       child: Icon(
+              //         Icons.menu,
+              //         size: 40,
+              //         color: Colors.white,
+              //       ),
+              //     )
+              // ),
               Padding(
                 padding: const EdgeInsets.only(left: 30.0),
                 child: Align(

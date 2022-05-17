@@ -24,6 +24,17 @@ class SocialWorkersPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Icon(
+                        Icons.menu,
+                        size: 40,
+                        color: Colors.white,
+                      ),
+                    )
+                ),
+                Align(
                   alignment: Alignment.topLeft,
                   child: Container(
                     child: Column(
