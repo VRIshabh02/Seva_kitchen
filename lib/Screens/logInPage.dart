@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:seva_kitchen/Screens/DonorPage.dart';
@@ -8,8 +9,9 @@ import 'package:seva_kitchen/Screens/socialWorkersPage.dart';
 import 'hospicalCanteensPage.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+   LoginPage({Key? key}) : super(key: key);
 
+  var otp;
   @override
   Widget build(BuildContext context) {
     int page = Get.arguments[0];
@@ -87,38 +89,48 @@ class LoginPage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: 150,
-                    height: 40,
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20,
-                      vertical: 5,
-                    ),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: TextFormField(
-                      cursorColor: Colors.white,
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                      decoration: InputDecoration.collapsed(
-                        hintStyle: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontSize: 12
-                        ),
-                        hintText: 'OTP',
-                      ),
-                    ),
-                  ),
+                child: OtpTextField(
+                  numberOfFields: 5,
+                  // fillColor: Colors.white,
+                  borderColor: Color(0xFF512DA8),
+                  //set to true to show as box or false to show as dash
+                  showFieldAsBox: true,
+                  //runs when a code is typed in
+                  onCodeChanged: (String code) {
+                    //handle validation or checks here
+                  },
+
+                  //runs when every textfield is filled
+                  onSubmit: (String verificationCode){
+                    showDialog(
+                        context: context,
+                        builder: (context){
+                          return
+                            Container();
+                          //   AlertDialog(
+                          //   title: Text("Verification Code"),
+                          //   content: Text('Code entered is $verificationCode'),
+                          // );
+                        }
+                    );
+                    otp = verificationCode;
+                  }, // end onSubmit
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("If you didnt recieved a code! Resend",
-                  style: GoogleFonts.poppins(color: Colors.white, fontSize: 10), ),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.orangeAccent,
+                      borderRadius: BorderRadius.circular(12)
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Resend OTP",
+                      style: GoogleFonts.poppins(color: Colors.black, fontSize: 10, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
               ),
               GestureDetector(
                 onTap: (){

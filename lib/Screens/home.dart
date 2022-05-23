@@ -27,11 +27,71 @@ class _MyHomePageState extends State<MyHomePage> {
         fit: BoxFit.fill,
       ),
       Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                child: Text(
+                  "Home",
+                  style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Get.off(() => HowItWorksPage());
+                },
+                child: Container(
+                  child: Text(
+                    "How it works?",
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xFF905801)),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // actions: [
+          //   Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //     children: [
+          //       Container(
+          //         child: Text(
+          //           "Home",
+          //           style: GoogleFonts.poppins(
+          //               fontSize: 20,
+          //               fontWeight: FontWeight.w400,
+          //               color: Colors.white),
+          //         ),
+          //       ),
+          //       GestureDetector(
+          //         onTap: () {
+          //           Get.off(() => HowItWorksPage());
+          //         },
+          //         child: Container(
+          //           child: Text(
+          //             "How it works?",
+          //             style: GoogleFonts.poppins(
+          //                 fontSize: 20,
+          //                 fontWeight: FontWeight.w400,
+          //                 color: Color(0xFF905801)),
+          //           ),
+          //         ),
+          //       ),
+          //     ],
+          //   ),
+          // ],
+        ),
         backgroundColor: Colors.transparent,
-        body: Stack(
-          children:[
-
-            Column(
+        body: Stack(children: [
+          Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -54,45 +114,19 @@ class _MyHomePageState extends State<MyHomePage> {
               //   ),
               // ),
 
-              SizedBox(height: 30,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    child: Text(
-                      "Home",
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: (){
-                      Get.off(()=> HowItWorksPage());
-                    },
-                    child: Container(
-                      child: Text(
-                        "How it works?",
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.w400, color: Color(
-                            0xFF905801)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+
               const Divider(
                 height: 0,
                 thickness: 1,
                 color: Colors.orangeAccent,
               ),
               const SizedBox(
-                height: 40,
+                height: 90,
               ),
 
               GestureDetector(
-                onTap: (){
-                  Get.to(()=> HospitalDetails());
+                onTap: () {
+                  Get.to(() => HospitalDetails());
                 },
                 child: Container(
                   child: Row(
@@ -104,21 +138,28 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.only(top: 7.0, left: 50),
                           child: Container(
                             height: 50,
-                            width: 180,
+                            width: 200,
                             decoration: BoxDecoration(
                               color: Colors.orangeAccent,
-                              borderRadius:
-                                  BorderRadius.only(topRight: Radius.circular(55)),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(55)),
                             ),
                             child: Column(
                               children: [
-                                Text("Hospitals", style: GoogleFonts.poppins(fontWeight: FontWeight.bold),),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 4.0),
+                                  child: Text(
+                                    "Hospitals",
+                                    style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Divider(
                                     endIndent: 40,
                                     thickness: 2,
-                                    height: 10,
+                                    height: 5,
                                   ),
                                 ),
                                 Text('Join us in seva')
@@ -148,8 +189,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               GestureDetector(
-                onTap: (){
-                  Get.to(()=> RegistrationPage(), arguments: [page=1]);
+                onTap: () {
+                  Get.to(() => RegistrationPage(), arguments: [page = 1]);
                 },
                 child: Container(
                   child: Row(
@@ -161,21 +202,28 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.only(top: 7.0, left: 50),
                           child: Container(
                             height: 50,
-                            width: 180,
+                            width: 200,
                             decoration: BoxDecoration(
                               color: Colors.orangeAccent,
-                              borderRadius:
-                                  BorderRadius.only(topRight: Radius.circular(55)),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(55)),
                             ),
                             child: Column(
                               children: [
-                                Text("Hospital Canteens", style: GoogleFonts.poppins(fontWeight: FontWeight.bold),),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 4.0),
+                                  child: Text(
+                                    "Hospital Canteens",
+                                    style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Divider(
                                     endIndent: 40,
                                     thickness: 2,
-                                    height: 10,
+                                    height: 5,
                                   ),
                                 ),
                                 Text('Partner with us')
@@ -190,7 +238,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: CircleAvatar(
                             radius: 30,
                             backgroundImage: AssetImage(
-                              'assets/images/hospitalLogo.png',
+                              'assets/images/hospitalCanteenLogo1.png',
                             ),
                           ),
                         ),
@@ -205,8 +253,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               GestureDetector(
-                onTap: (){
-                  Get.to(()=> RegistrationPage(), arguments: [page = 2]);
+                onTap: () {
+                  Get.to(() => RegistrationPage(), arguments: [page = 2]);
                 },
                 child: Container(
                   child: Row(
@@ -218,36 +266,44 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.only(top: 7.0, left: 50),
                           child: Container(
                             height: 50,
-                            width: 180,
+                            width: 200,
                             decoration: BoxDecoration(
                               color: Colors.orangeAccent,
-                              borderRadius:
-                                  BorderRadius.only(topRight: Radius.circular(55)),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(55)),
                             ),
                             child: Column(
                               children: [
-                                Text("Social Workers", style: GoogleFonts.poppins(fontWeight: FontWeight.bold),),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 4.0),
+                                  child: Text(
+                                    "Social Workers",
+                                    style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Divider(
                                     endIndent: 40,
                                     thickness: 2,
-                                    height: 10,
+                                    height: 5,
                                   ),
                                 ),
-                                Text('Share a food tocken')
+                                Text('Share a food token')
                               ],
                             ),
                           ),
                         ),
                         Container(
                           decoration: BoxDecoration(
+                            color: Colors.orangeAccent,
                               border: Border.all(color: Colors.white, width: 3),
                               borderRadius: BorderRadius.circular(35)),
-                          child: CircleAvatar(
-                            radius: 30,
+                          child: CircleAvatar(backgroundColor: Colors.orangeAccent,
+                            radius: 30,foregroundColor: Colors.orangeAccent,
                             backgroundImage: AssetImage(
-                              'assets/images/hospitalLogo.png',
+                              'assets/images/socialWorkersLogo1.png',
                             ),
                           ),
                         ),
@@ -262,8 +318,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               GestureDetector(
-                onTap: (){
-                  Get.to(()=> RegistrationPage(), arguments: [page = 3]);
+                onTap: () {
+                  Get.to(() => RegistrationPage(), arguments: [page = 3]);
                 },
                 child: Container(
                   child: Row(
@@ -275,21 +331,28 @@ class _MyHomePageState extends State<MyHomePage> {
                           padding: const EdgeInsets.only(top: 7.0, left: 50),
                           child: Container(
                             height: 50,
-                            width: 180,
+                            width: 200,
                             decoration: BoxDecoration(
                               color: Colors.orangeAccent,
-                              borderRadius:
-                                  BorderRadius.only(topRight: Radius.circular(55)),
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(55)),
                             ),
                             child: Column(
                               children: [
-                                Text("Donors", style: GoogleFonts.poppins(fontWeight: FontWeight.bold),),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 4.0),
+                                  child: Text(
+                                    "Donors",
+                                    style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Divider(
                                     endIndent: 40,
                                     thickness: 2,
-                                    height: 10,
+                                    height: 5,
                                   ),
                                 ),
                                 Text('Buy a meal for a patient')
@@ -299,12 +362,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Container(
                           decoration: BoxDecoration(
+                              color: Colors.orangeAccent,
                               border: Border.all(color: Colors.white, width: 3),
                               borderRadius: BorderRadius.circular(35)),
-                          child: CircleAvatar(
-                            radius: 30,
-                            backgroundImage: AssetImage(
-                              'assets/images/hospitalLogo.png',
+                          child: Padding(
+                            padding: const EdgeInsets.all(0.0),
+                            child: CircleAvatar(backgroundColor: Colors.orangeAccent,
+                              radius: 30,foregroundColor: Colors.orangeAccent,
+                              backgroundImage: AssetImage(
+                                'assets/images/donorLogo2.png',
+                              ),
                             ),
                           ),
                         ),
@@ -315,8 +382,7 @@ class _MyHomePageState extends State<MyHomePage> {
               )
             ],
           ),
-    ]
-        ),
+        ]),
       ),
     ]);
   }

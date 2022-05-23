@@ -15,33 +15,48 @@ class HospitalRegistrationComplete extends StatelessWidget {
       ),
       Scaffold(
         backgroundColor: Colors.transparent,
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Align(
-                alignment: Alignment.topLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Icon(
-                    Icons.menu,
-                    size: 40,
-                    color: Colors.white,
-                  ),
-                )),
-            Image.asset(
-              'assets/images/logo.png',
-              height: 100,
-            ),
-            Text(
-              'Thank you',
-              style: GoogleFonts.poppins(color: Colors.orangeAccent, fontSize: 30),
-            ),
-            Text(
-              'The request will be\n processed within\n 23-48 hours',
-              style: GoogleFonts.poppins(color: Colors.white, fontSize: 20),
-            )
-          ],
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          iconTheme: IconThemeData(size: 40, color: Colors.white),
+          elevation: 0,
+          leading: Icon(Icons.menu),
+        ),
+//         drawer: Drawer(
+// backgroundColor: Colors.transparent,elevation: 0,
+//         ),
+        body: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Align(
+              //     alignment: Alignment.topLeft,
+              //     child: Padding(
+              //       padding: const EdgeInsets.all(12.0),
+              //       child: Icon(
+              //         Icons.menu,
+              //         size: 40,
+              //         color: Colors.white,
+              //       ),
+              //     )),
+
+              Image.asset(
+                'assets/images/logo.png',
+                height: 150,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Thank you',
+                  style: GoogleFonts.poppins(color: Colors.orangeAccent, fontSize: 30),
+                ),
+              ),
+              Text(
+                'The request will be\n processed within\n 24-48 hours',textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(color: Colors.white, fontSize: 20),
+              )
+            ],
+          ),
         ),
       ),
     ]);

@@ -34,7 +34,7 @@ class TokenGeneratedPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
                 child: Container(
-                  height: 250,
+                  height: 270,
                   width: 200,
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -68,7 +68,7 @@ class TokenGeneratedPage extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "Note: Please share the token number with the recipient.",
+                            "Note: Please share the free food token number with the recipient.",
                             style: GoogleFonts.poppins(
                                 color: Colors.orangeAccent,
                                 fontSize: 12,

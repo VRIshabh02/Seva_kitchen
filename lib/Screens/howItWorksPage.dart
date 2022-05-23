@@ -8,34 +8,20 @@ class HowItWorksPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children:[
-        Image.asset(
-          "assets/images/background1.png",
-          // height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          fit: BoxFit.fill,
-        ),
-        Scaffold(
-        backgroundColor: Colors.transparent,
-          body: Column(mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
+    return Stack(children: [
+      Image.asset(
+        "assets/images/background1.png",
+        // height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        fit: BoxFit.fill,
+      ),
+      Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              // Align(
-              //     alignment: Alignment.topLeft,
-              //     child: Padding(
-              //       padding: const EdgeInsets.all(12.0),
-              //       child: Icon(
-              //         Icons.menu,
-              //         size: 40,
-              //         color: Colors.white,
-              //       ),
-              //     )
-              // ),
-              SizedBox(height: 30,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
                   GestureDetector(
                     onTap: (){
                       Get.off(()=> MyHomePage());
@@ -44,200 +30,264 @@ class HowItWorksPage extends StatelessWidget {
                       child: Text(
                         "Home",
                         style: GoogleFonts.poppins(
+                          fontSize: 20,
                             fontWeight: FontWeight.w400,
                             color: Color(0xFF905801)),
                       ),
                     ),
                   ),
-                  Container(
-                    child: Text(
-                      "How it works",
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w400, color: Colors.white),
-                    ),
-                  ),
-                ],
-              ),
-              const Divider(
-                height: 0,
-                thickness: 1,
-                color: Colors.orangeAccent,
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Stack(children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 13.0, left: 40),
-                          child: Container(
-                            height: 20,
-                            width: 180,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                              BorderRadius.only(topRight: Radius.circular(55), bottomRight: Radius.circular(55)),
-                            ),
-                            child: Column(
-                              children: [
-                                Text("Hospitals"),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 3),
-                              borderRadius: BorderRadius.circular(35)),
-                          child: CircleAvatar(
-                            radius: 20,
-                            backgroundImage: AssetImage(
-                              'assets/images/hospitalLogo.png',
-                            ),
-                          ),
-                        ),
-                      ]),
-                    ],
-                  ),
+              Container(
+                child: Text(
+                  "How it works?",
+                  style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white),
                 ),
               ),
-              Text('Description', style: GoogleFonts.poppins(color: Colors.white),),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Stack(children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 13.0, left: 40),
-                          child: Container(
-                            height: 20,
-                            width: 180,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                              BorderRadius.only(topRight: Radius.circular(55), bottomRight: Radius.circular(55)),
-                            ),
-                            child: Column(
-                              children: [
-                                Text("Hospitals"),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 3),
-                              borderRadius: BorderRadius.circular(35)),
-                          child: CircleAvatar(
-                            radius: 20,
-                            backgroundImage: AssetImage(
-                              'assets/images/hospitalLogo.png',
-                            ),
-                          ),
-                        ),
-                      ]),
-                    ],
-                  ),
-                ),
-              ),
-              Text('Description', style: GoogleFonts.poppins(color: Colors.white),),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Stack(children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 13.0, left: 40),
-                          child: Container(
-                            height: 20,
-                            width: 180,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                              BorderRadius.only(topRight: Radius.circular(55), bottomRight: Radius.circular(55)),
-                            ),
-                            child: Column(
-                              children: [
-                                Text("Hospitals"),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 3),
-                              borderRadius: BorderRadius.circular(35)),
-                          child: CircleAvatar(
-                            radius: 20,
-                            backgroundImage: AssetImage(
-                              'assets/images/hospitalLogo.png',
-                            ),
-                          ),
-                        ),
-                      ]),
-                    ],
-                  ),
-                ),
-              ),
-              Text('Description', style: GoogleFonts.poppins(color: Colors.white),),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Stack(children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 13.0, left: 40),
-                          child: Container(
-                            height: 20,
-                            width: 180,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                              BorderRadius.only(topRight: Radius.circular(55), bottomRight: Radius.circular(55)),
-                            ),
-                            child: Column(
-                              children: [
-                                Text("Hospitals"),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.white, width: 3),
-                              borderRadius: BorderRadius.circular(35)),
-                          child: CircleAvatar(
-                            radius: 20,
-                            backgroundImage: AssetImage(
-                              'assets/images/hospitalLogo.png',
-                            ),
-                          ),
-                        ),
-                      ]),
-                    ],
-                  ),
-                ),
-              ),
-              Text('Description', style: GoogleFonts.poppins(color: Colors.white),),
             ],
           ),
         ),
-    ]
-    );
+        backgroundColor: Colors.transparent,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Align(
+            //     alignment: Alignment.topLeft,
+            //     child: Padding(
+            //       padding: const EdgeInsets.all(12.0),
+            //       child: Icon(
+            //         Icons.menu,
+            //         size: 40,
+            //         color: Colors.white,
+            //       ),
+            //     )
+            // ),
+
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //   children: [
+            //     GestureDetector(
+            //       onTap: (){
+            //         Get.off(()=> MyHomePage());
+            //       },
+            //       child: Container(
+            //         child: Text(
+            //           "Home",
+            //           style: GoogleFonts.poppins(
+            //             fontSize: 20,
+            //               fontWeight: FontWeight.w400,
+            //               color: Color(0xFF905801)),
+            //         ),
+            //       ),
+            //     ),
+            //     Container(
+            //       child: Text(
+            //         "How it works",
+            //
+            //         style: GoogleFonts.poppins(
+            //           fontSize: 20,
+            //             fontWeight: FontWeight.w400, color: Colors.white),
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            const Divider(
+              height: 0,
+              thickness: 1,
+              color: Colors.orangeAccent,
+            ),
+            const SizedBox(
+              height: 90,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Stack(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 13.0, left: 40),
+                        child: Container(
+                          height: 20,
+                          width: 180,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(55),
+                                bottomRight: Radius.circular(55)),
+                          ),
+                          child: Column(
+                            children: [
+                              Text("Hospitals"),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 3),
+                            borderRadius: BorderRadius.circular(35)),
+                        child: CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage(
+                            'assets/images/hospitalLogo.png',
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ],
+                ),
+              ),
+            ),
+            Text(
+              'Description',
+              style: GoogleFonts.poppins(color: Colors.white),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Stack(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 13.0, left: 40),
+                        child: Container(
+                          height: 20,
+                          width: 180,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(55),
+                                bottomRight: Radius.circular(55)),
+                          ),
+                          child: Column(
+                            children: [
+                              Text("Hospitals"),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 3),
+                            borderRadius: BorderRadius.circular(35)),
+                        child: CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage(
+                            'assets/images/hospitalLogo.png',
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ],
+                ),
+              ),
+            ),
+            Text(
+              'Description',
+              style: GoogleFonts.poppins(color: Colors.white),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Stack(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 13.0, left: 40),
+                        child: Container(
+                          height: 20,
+                          width: 180,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(55),
+                                bottomRight: Radius.circular(55)),
+                          ),
+                          child: Column(
+                            children: [
+                              Text("Hospitals"),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 3),
+                            borderRadius: BorderRadius.circular(35)),
+                        child: CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage(
+                            'assets/images/hospitalLogo.png',
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ],
+                ),
+              ),
+            ),
+            Text(
+              'Description',
+              style: GoogleFonts.poppins(color: Colors.white),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Stack(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 13.0, left: 40),
+                        child: Container(
+                          height: 20,
+                          width: 180,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(55),
+                                bottomRight: Radius.circular(55)),
+                          ),
+                          child: Column(
+                            children: [
+                              Text("Hospitals"),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 3),
+                            borderRadius: BorderRadius.circular(35)),
+                        child: CircleAvatar(
+                          radius: 20,
+                          backgroundImage: AssetImage(
+                            'assets/images/hospitalLogo.png',
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ],
+                ),
+              ),
+            ),
+            Text(
+              'Description',
+              style: GoogleFonts.poppins(color: Colors.white),
+            ),
+          ],
+        ),
+      ),
+    ]);
   }
 }
